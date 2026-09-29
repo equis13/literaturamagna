@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <title>Magna Litterae - La mejor literatura de la cultura occidental</title>
+  <meta name="author" content="Ivan Lopez Pedreañez"/>
+  <meta name="description" content="La mejor literatura de la cultura occidental"/>
+  <meta name="keywords" content="literatura, cultura occidental, clasicos, literatura clasica, literatura gotica, literatura romantica, literatura filosofia, novelas"/>
+
+  <!-- Google Fonts: Optimizado solo a las fuentes utilizadas en las reglas CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lovers+Quarrel&family=Open+Sans+Condensed:wght@300;700&family=Pacifico&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Externos -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+  <!-- Unificación de Estilos CSS -->
+  <style>
+    :root {
+      --oldgold: rgba(120, 97, 0, 0.75);
+      --golder: #D4AF37;
+      --yellow: #FABB13;
+    }
+
+    html, body {
+      background-image: url('golden.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-family: 'Abel', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mox { width: 75%; }
+    .flex-centrado-c { display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; }
+    .flex-centrado-r { display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; }
+
+    #nav_bar { 
+      background-color: var(--yellow); 
+    }
+
+    .navbar-brand-custom {
+      color: white !important;
+      background-color: var(--oldgold);
+      font-family: 'Lovers Quarrel', cursive;
+      font-size: 280%;
+    }
+
+    #golden_frame {
+      position: fixed;
+      float: left;
+      width: 27%;
+      z-index: 1;
+      top: 50px;
+    }
+
+    #golden_frame2 {
+      position: fixed;
+      float: left;
+      width: 4.6%;
+      z-index: 1;
+      top: 356px;
+    }
+
+    #jumbolegend {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 2.1vw;
+    }
+
+    #jumboton {
+      background: var(--oldgold);
+      border: 1px ridge white;
+      color: white;
+    }
+
+    .jumbotron {
+      background: #000 url("Fondo_MagnaLiteratura_corto.png") center center;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      overflow: hidden;
+      color: #fff;
+      border-bottom: 3px solid black;
+      margin-bottom: 0;
+    }
+
+    .jumbotron .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: flex-end;
+      align-items: flex-end;
+    }
+
+    h2 {
+      font-family: 'Tangerine', cursive;
+      color: var(--golder);
+      text-shadow: 0.5px 0.5px rgb(179, 149, 0);
+    }
+
+    a { color: var(--yellow); }
+
+    .analisis {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: flex-end;
+      align-items: flex-end;
+      padding: 20px 0;
+    }
+
+    .clasico {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center center;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-content: flex-start;
+      align-items: flex-start;
+      padding-left: 8vw;
+      width: 82vw;
+      height: 27vh;
+      margin-bottom: 5vh;
+      border-radius: 0.52vw;
+      text-decoration: none;
+    }
+
+    .clasico:hover, .clasico:focus {
+      text-decoration: none;
+    }
+
+    .clasico1 { background-image: url('img/snowwhite.jpg'); }
+    .clasico2 { background-image: url('img/bellebete.jpg'); }
+    .clasico3 { background-image: url('img/king_lear.jpg'); }
+    .clasico4 { background-image: url('img/rometjul.jpg'); }
+    .clasico5 { background-image: url('img/rapunzel.png'); }
+
+    .book_name {
+      font-family: 'Pacifico', cursive;
+      color: #e1e100;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .book_subt {
+      font-size: 24px;
+      color: white;
+      margin: 0;
+    }
+
+    footer.social-iframes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 0;
+    }
+
+    iframe {
+      border-top: 20px solid var(--golder);
+      border-left: 0;
+      border-right: none;
+      border-bottom: none;
+      background: white;
+    }
+
+    .fondo {
+      background-color: var(--oldgold);
+      min-height: 15vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .fondo div {
+      max-width: 1000px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 800px) {
+      .jumbotron {
+        width: 100vw;
+        height: 40vh;
+        background-size: 100% 100%;
+      }
+      #golden_frame { width: 47%; z-index: 1; top: 44px; }
+      #golden_frame2 { width: 12%; z-index: 1; top: 84px; }
+      #tweets { flex-flow: column wrap; }
+      .tweets { width: 65vw; height: 55vh; margin-bottom: 10vh; overflow-y: hidden; }
+      .book_name { font-size: 26px; }
+      .book_subt { font-size: 21px; }
+      footer.social-iframes { flex-direction: column; }
+      footer.social-iframes iframe { width: 90% !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="LiteraturaMagna">  
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav_bar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-brand-custom" href="https://literaturamagna.blogspot.com">Magna Litterae</a>
+        </div>
+        
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav" style="color:white">
+            <li class="active"><a href="#" style="color: white">Prólogo</a></li>
+            <li><a href="novela.html" style="color:white">Novelas</a></li>
+            <li><a href="poesia.html" style="color:white">Poesía</a></li>
+            <li><a href="dramae.html" style="color:white">Drama</a></li>
+            <li><a href="epica.html" style="color:white">Épica</a></li>
+            <li><a href="/fairytails/index.html" style="color:white">Fairy Tales</a></li>
+            
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="color:white">Leer <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="obras.html">De mi pluma</a></li>                                   
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" style="color:white">Circa <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="about-analisis.html">Análisis</a></li>
+                <li><a href="about-literature.html">Literatura</a></li>                  
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="./" style="background-color:black; color:white">Contáctanos</a>
+            </li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav> 
+
+    <!-- Marcos dorados fijados -->
+    <img id="golden_frame" src="https://3.bp.blogspot.com/-kpNiQhvlkis/W11T8zZgavI/AAAAAAAAFDo/169-Bo0knlsoBdA5oQpjuWjJAa3zhfWxgCLcBGAs/s1600/golden_frame01.png" alt="Golden Frame Left"/>
+    <img id="golden_frame2" src="https://3.bp.blogspot.com/-WAfHW6SbYmc/W3IsFZEmVBI/AAAAAAAAFKs/gt8CAZs7HNQJ1OmaSFTwEmeFIZj22CzYACLcBGAs/s1600/golden_frame03.png" alt="Golden Frame Accent"/>
+
+    <!-- Jumbotron Principal -->
+    <div class="jumbotron" id="jumboLM">
+      <div class="container" style="padding-top:32vw">
+        <p id="jumbolegend">La mejor literatura del mundo occidental</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" id="jumboton" role="button">Descubre</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Lista de Análisis -->
+    <div class="analisis">
+      <h2 style="font-size: 60px; margin: 0px 14px 20px;">Análisis de Clásicos</h2>
+      
+      <a href="https://literaturamagna.github.io/blancanieves.html" class="clasico clasico1">
+        <p class="book_name" style="color:#e43400">Blancanieves</p>
+        <p class="book_subt">La muerte de la inocencia</p>
+      </a>
+
+      <a href="https://literaturamagna.github.io/la_bella_y_la_bestia.html" class="clasico clasico2">
+        <p class="book_name">La Bella y la Bestia</p>
+        <p class="book_subt">El ojo de la conciencia</p>
+      </a>
+
+      <a href="https://literaturamagna.github.io/rey_lear.html" class="clasico clasico3">
+        <p class="book_name" style="color:gold">El Rey Lear</p>
+        <p class="book_subt">Los ojos del Rey</p>
+      </a>
+
+      <a href="https://literaturamagna.github.io/romeo_y_julieta.html" class="clasico clasico4">
+        <p class="book_name">Romeo y Julieta</p>
+        <p class="book_subt">La lucha en la Polis</p>
+      </a>
+
+      <a href="https://literaturamagna.github.io/rapunzel.html" class="clasico clasico5">
+        <p class="book_name" style="color:#e43400">Rapunzel</p>
+        <p class="book_subt">La luz interior</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Redes Sociales / iFrames -->
+  <footer class="social-iframes">
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fliteraturamagna%2Fposts%2Fpfbid0nuYNcvBZK6t81zZ398QQo8W5fNfQtFydHGa4dAcNrYroeNZaThX5pjvoeuMQXzwhl&show_text=false&width=500" width="25%" height="300" scrolling="yes" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fliteraturamagna%2Fposts%2Fpfbid0pfSAn1MHUzXMeUks6pRxFKSdg9w6fHCEcyW8PZtGVY8eDZtUcXaBep6CFgtde5t3l&show_text=false&width=500" width="25%" height="300" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fliteraturamagna%2Fposts%2Fpfbid0vfpFMkbSpb5eRx2yfatXRooWfVQiPuJWX6sw33kwq21zj8WzdFhxhvB8HfyUFojml&show_text=false&width=500" width="25%" height="300" scrolling="yes" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </footer>
+
+  <!-- Pie de página final -->
+  <footer class="fondo">
+    <div>
+      <p>&copy; Magna Litterae — Espacio dedicado al análisis profundo de los grandes clásicos de la literatura occidental, filosofía y narrativa universal.</p>
+    </div>
+  </footer>
+
+  <!-- Carga ordenada de Scripts JS (al final del body) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
